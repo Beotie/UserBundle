@@ -1,0 +1,33 @@
+{
+    "name": "beotie/user_bundle",
+    "description": "Is package manage the beotie users",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "matthieu vallance",
+            "email": "matthieu.vallance@cscfa.fr"
+        }
+    ],
+    "minimum-stability": "dev",
+	"require" : {
+		"symfony/http-kernel" : "^3.3@stable",
+		"symfony/framework-bundle" : "^3.3@stable",
+		"symfony/http-foundation" : "^3.3@stable",
+		"symfony/dependency-injection" : "^3.3@stable",
+		"symfony/config" : "^3.3@stable",
+		"symfony/yaml" : "^3.3@stable"
+	},
+	"require-dev" : {
+		"phpunit/phpunit" : "^6.3@stable",
+		"phpmd/phpmd" : "^2.6@stable",
+		"squizlabs/php_codesniffer" : "^3.0@stable",
+		"sebastian/phpcpd" : "^3.0@stable",
+		"phpmetrics/phpmetrics" : "^2.2@stable"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Beotie\\UserBundle\\" : "UserBundle"
+		}
+	}
+}

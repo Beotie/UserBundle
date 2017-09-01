@@ -1,0 +1,3 @@
+#beotie_user_homepage:
+#    path:     /
+#    defaults: { _controller: BeotieUserBundle:Default:index }

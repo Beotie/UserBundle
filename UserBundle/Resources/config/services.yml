@@ -1,0 +1,4 @@
+services:
+#    beotie_user.example:
+#        class: Beotie\UserBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
