@@ -281,8 +281,12 @@ class Role
      *
      * @return $this
      */
-    public function setDeletionDate(\DateTime $deletionDate)
+    public function setDeletionDate($deletionDate)
     {
+        if ($deletionDate !== null && !$deletionDate instanceof \DateTime) {
+            throw new \TypeError();
+        }
+
         $this->deletionDate = $deletionDate;
         return $this;
     }

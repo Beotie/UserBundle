@@ -185,6 +185,7 @@ class RoleTest extends TestCase
             ['setDescription', 'base role user description', 'description'],
             ['setLocale', 'en_en', 'locale'],
             ['setLocale', 'de_de', 'locale'],
+            ['setDeletionDate', null, 'deletionDate'],
             ['setDeletionDate', new \DateTime(), 'deletionDate'],
             ['setDeletionDate', new \DateTime('-1 week'), 'deletionDate']
         ];
@@ -262,7 +263,7 @@ class RoleTest extends TestCase
             [false, true, true, true, true, true, true],
             [false, true, true, true, true, true, true],
             [false, true, true, true, true, true, true],
-            [true, true, true, true, true, true, false]
+            [true, true, true, true, false, true, false]
         ];
         $setters = ['setLabel', 'setLongLabel', 'setDescription', 'setLocale', 'setDeletionDate'];
 
