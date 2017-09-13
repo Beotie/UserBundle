@@ -86,7 +86,6 @@ class RoleTest extends TestCase
             ['label', $this->isNull()],
             ['longLabel', $this->isNull()],
             ['description', $this->isNull()],
-            ['locale', $this->isNull()],
             ['deletionDate', $this->isNull()],
             ['creationDate', $this->isNull()],
             ['lastUpdateDate', $this->isNull()]
@@ -131,8 +130,6 @@ class RoleTest extends TestCase
             ['getLongLabel', 'base role user', 'longLabel'],
             ['getDescription', 'base role label description', 'description'],
             ['getDescription', 'base role user description', 'description'],
-            ['getLocale', 'en_en', 'locale'],
-            ['getLocale', 'de_de', 'locale'],
             ['getDeletionDate', new \DateTime(), 'deletionDate'],
             ['getDeletionDate', new \DateTime('-1 week'), 'deletionDate'],
             ['getCreationDate', new \DateTime(), 'creationDate'],
@@ -183,8 +180,6 @@ class RoleTest extends TestCase
             ['setLongLabel', 'base role user', 'longLabel'],
             ['setDescription', 'base role label description', 'description'],
             ['setDescription', 'base role user description', 'description'],
-            ['setLocale', 'en_en', 'locale'],
-            ['setLocale', 'de_de', 'locale'],
             ['setDeletionDate', null, 'deletionDate'],
             ['setDeletionDate', new \DateTime(), 'deletionDate'],
             ['setDeletionDate', new \DateTime('-1 week'), 'deletionDate']
@@ -262,10 +257,9 @@ class RoleTest extends TestCase
             [false, true, true, true, true, true, true],
             [false, true, true, true, true, true, true],
             [false, true, true, true, true, true, true],
-            [false, true, true, true, true, true, true],
             [true, true, true, true, false, true, false]
         ];
-        $setters = ['setLabel', 'setLongLabel', 'setDescription', 'setLocale', 'setDeletionDate'];
+        $setters = ['setLabel', 'setLongLabel', 'setDescription', 'setDeletionDate'];
 
         $result = [];
         $typeCount = count($types);

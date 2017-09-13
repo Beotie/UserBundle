@@ -45,7 +45,7 @@ class Role
      *
      * @var string
      */
-    protected $label;
+    private $label;
 
     /**
      * Long label
@@ -54,7 +54,7 @@ class Role
      *
      * @var string
      */
-    protected $longLabel;
+    private $longLabel;
 
     /**
      * Description
@@ -63,16 +63,7 @@ class Role
      *
      * @var string
      */
-    protected $description;
-
-    /**
-     * Locale
-     *
-     * This property store the Role's translation locale
-     *
-     * @var string
-     */
-    protected $locale;
+    private $description;
 
     /**
      * Creation date
@@ -81,7 +72,7 @@ class Role
      *
      * @var \DateTime
      */
-    protected $creationDate;
+    private $creationDate;
 
     /**
      * Deletion date
@@ -90,7 +81,7 @@ class Role
      *
      * @var \DateTime
      */
-    protected $deletionDate;
+    private $deletionDate;
 
     /**
      * Last update date
@@ -99,7 +90,7 @@ class Role
      *
      * @var \DateTime
      */
-    protected $lastUpdateDate;
+    private $lastUpdateDate;
 
     /**
      * Construct
@@ -159,18 +150,6 @@ class Role
     public function getDescription()
     {
         return $this->description;
-    }
-
-    /**
-     * Get locale
-     *
-     * This method return the Role's locale
-     *
-     * @return string
-     */
-    public function getLocale()
-    {
-        return $this->locale;
     }
 
     /**
@@ -254,21 +233,6 @@ class Role
     public function setDescription(string $description)
     {
         $this->description = $description;
-        return $this;
-    }
-
-    /**
-     * Set locale
-     *
-     * This method allow to set the locale of the Role instance.
-     *
-     * @param string $locale The locale of the instance
-     *
-     * @return $this
-     */
-    public function setLocale(string $locale)
-    {
-        $this->locale = $locale;
         return $this;
     }
 

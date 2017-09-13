@@ -11,6 +11,9 @@
         <testsuite name="all">
             <directory>UserBundle/Tests</directory>
         </testsuite>
+        <testsuite name="unitTest">
+            <directory>UserBundle/Tests/Model/RoleTest.php</directory>
+        </testsuite>
     </testsuites>
 
     <filter>

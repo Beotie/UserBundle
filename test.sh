@@ -43,7 +43,7 @@ echo "$TEST_RES" > doc/phpunit.txt
 test "/usr/bin/env php vendor/bin/phpcs --standard=./csruleset.xml UserBundle/" PHPCS 100
 echo "$TEST_RES" > doc/phpcs.txt
 
-test "composer validate" COMPOSER 100
+test "/composer/composer.phar validate" COMPOSER 100
 echo "$TEST_RES" > doc/composer.txt
 
 test "/usr/bin/env php vendor/bin/phpmd UserBundle/ text ./phpmd.xml" PHPMD 100
