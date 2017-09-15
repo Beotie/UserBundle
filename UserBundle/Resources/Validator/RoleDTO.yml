@@ -1,0 +1,39 @@
+Beotie\UserBundle\Model\DataTransfertObject\RoleDTO:
+    properties:
+        label:
+            - NotBlank: 
+                groups:
+                    - "default"
+                    - "create"
+            - Type:
+                groups:
+                    - "default"
+                    - "create"
+                type: "string"
+            - Regex:
+                groups:
+                    - "default"
+                    - "create"
+                pattern: "/^[A-Z][A-Z0-9_]*$/"
+        longLabel:
+            - NotBlank: 
+                groups:
+                    - "default"
+                    - "create"
+            - Type:
+                groups:
+                    - "default"
+                    - "create"
+                type: "string"
+        deletionDate:
+            - LessThanOrEqual:
+                value: "now UTC"
+                groups:
+                    - "default"
+                    - "create"
+            - Type:
+                groups:
+                    - "default"
+                    - "create"
+                type: "\\DateTime"
+                

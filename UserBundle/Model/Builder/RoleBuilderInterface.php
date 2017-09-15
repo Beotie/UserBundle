@@ -69,9 +69,11 @@ interface RoleBuilderInterface
      *
      * This method remove the role instance. It set the deletion date to now.
      *
+     * @param \DateTime $deletionDate [optional] The deletion date. If null, the current date time is used.
+     *
      * @return $this
      */
-    public function remove() : RoleBuilderInterface;
+    public function remove(\DateTime $deletionDate = null) : RoleBuilderInterface;
 
     /**
      * Restore

@@ -13,6 +13,16 @@
         </testsuite>
         <testsuite name="unitTest">
             <directory>UserBundle/Tests/Model/RoleTest.php</directory>
+            <directory>UserBundle/Tests/Model/Builder/RoleBuilderTest.php</directory>
+            <directory>UserBundle/Tests/Model/Factory/RoleFactoryTest.php</directory>
+            
+            <directory>UserBundle/Tests/Exception/UnvalidatedRoleDtoTest.php</directory>
+            
+            <directory>UserBundle/Tests/DependencyInjection/BeotieUserExtensionTest.php</directory>
+            <directory>UserBundle/Tests/DependencyInjection/ConfigurationTest.php</directory>
+        </testsuite>
+        <testsuite name="fonctional">
+            <directory>UserBundle/Tests/Model/Factory/FonctionalRoleFactoryTest.php</directory>
         </testsuite>
     </testsuites>
 

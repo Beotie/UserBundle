@@ -45,7 +45,8 @@ class RoleBuilderTest extends TestCase
         return [
             ['setLabel', 'label', 'My label'],
             ['setLongLabel', 'longLabel', 'My long label'],
-            ['setDescription', 'description', 'My description']
+            ['setDescription', 'description', 'My description'],
+            ['remove', 'deletionDate', new \DateTime()]
         ];
     }
 
@@ -56,12 +57,12 @@ class RoleBuilderTest extends TestCase
      *
      * @param string $method   The method name
      * @param string $property The storage proeprty name
-     * @param string $value    The value to use as setter argument
+     * @param mixed  $value    The value to use as setter argument
      *
      * @dataProvider provideSetterArguments
      * @return       void
      */
-    public function testSetter(string $method, string $property, string $value = null)
+    public function testSetter(string $method, string $property, $value = null)
     {
         $instance = new RoleBuilder();
 
